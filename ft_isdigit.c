@@ -6,11 +6,11 @@
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 02:14:53 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/03/14 02:23:49 by jiyoon           ###   ########.fr       */
+/*   Updated: 2022/03/14 02:50:07 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    return ((c >= '0') && (c <= '9'));
+	return ((c >= '0') && (c <= '9'));
 }

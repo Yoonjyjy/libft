@@ -6,7 +6,7 @@
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 00:47:49 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/03/14 02:16:40 by jiyoon           ###   ########.fr       */
+/*   Updated: 2022/03/14 02:56:44 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main(void)
+int	main(void)
 {
-    int i;
+	int	i;
 
-    i = isalpha('a');
-    printf("%d", i);
-    return (0);
+	i = isascii(128);
+	printf("%d", i);
+	return (0);
 }
