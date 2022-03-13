@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 00:47:49 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/03/14 02:16:40 by jiyoon           ###   ########.fr       */
+/*   Created: 2022/03/14 02:14:53 by jiyoon            #+#    #+#             */
+/*   Updated: 2022/03/14 02:23:49 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <ctype.h>
-
-int main(void)
+int ft_isdigit(int c)
 {
-    int i;
-
-    i = isalpha('a');
-    printf("%d", i);
-    return (0);
+    return ((c >= '0') && (c <= '9'));
 }
