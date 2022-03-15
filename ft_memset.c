@@ -6,7 +6,7 @@
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 03:39:53 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/03/15 21:04:43 by jiyoon           ###   ########.fr       */
+/*   Updated: 2022/03/16 00:58:40 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ void	*ft_memset(void *ptr, int value, size_t len)
 
 	i = 0;
 	while (i < len)
-	{
-		*((char *)ptr + i) = value;
-		i++;
-	}
+		*((unsigned char *)ptr + i++) = (unsigned char)value;
 	return (ptr);
 }
