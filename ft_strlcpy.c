@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 03:51:10 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/05/11 14:49:49 by jiyoon           ###   ########.fr       */
+/*   Created: 2022/05/11 15:11:26 by jiyoon            #+#    #+#             */
+/*   Updated: 2022/05/11 16:09:49 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t	i;
+	unsigned int	i;
 
-	if (dst == NULL && src == NULL)
+	i = 0;
+	if (dstsize <= 0)
+		return (ft_strlen(src));
+	if (*dst == '\0')
 		return (0);
-	if (dst < src)
+	while (i + 1 < dstsize && *(src + i) != '\0')
 	{
-		i = 0;
-		while (i < len)
-		{
-			*((unsigned char *)dst + i) = *((const unsigned char *)src + i);
-			i++;
-		}
+		*(dst + i) = *(src + i);
+		i++;
 	}
-	else
-	{
-		i = len;
-		while (i)
-		{
-			*((unsigned char *)dst + i - 1) \
-				= *((const unsigned char *)src + i - 1);
-			i--;
-		}
-	}
-	return (dst);
+	*(dst + i) = '\0';
+	while (*(src + i))
+		i++;
+	return (i);
 }
+
+// 테스트 필요
