@@ -1,6 +1,0 @@
-*.dSYM
-.DS_Store
-.vscode
-.gitignore
-test*
-a.out
