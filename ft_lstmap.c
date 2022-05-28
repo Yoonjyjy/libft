@@ -6,7 +6,7 @@
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 08:45:38 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/05/23 08:50:34 by jiyoon           ###   ########.fr       */
+/*   Updated: 2022/05/28 14:45:49 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*node;
 	t_list	*tmp;
 
+	node = NULL;
 	while (lst)
 	{
 		tmp = ft_lstnew((*f)(lst->content));
@@ -28,5 +29,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&node, tmp);
 		lst = lst->next;
 	}
+	tmp = NULL;
 	return (node);
 }

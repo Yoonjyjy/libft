@@ -6,7 +6,7 @@
 /*   By: jiyoon <jiyoon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/20 02:58:40 by jiyoon            #+#    #+#             */
-/*   Updated: 2022/05/23 09:10:31 by jiyoon           ###   ########.fr       */
+/*   Updated: 2022/05/28 13:01:15 by jiyoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (!haystack && !needle)
 		return (NULL);
-	if (!needle)
+	if (!*needle)
 		return ((char *)haystack);
 	needle_len = ft_strlen(needle);
 	h_idx = 0;
